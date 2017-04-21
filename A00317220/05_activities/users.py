@@ -105,7 +105,7 @@ def update_history():
 
 @app.route(api_url+'/users/<string:username>/commands', methods =['DELETE'])
 def delete_history():
- return ""HTTP 404 NOT FOUND", 404
+ return "HTTP 404 NOT FOUND", 404
 
 
   
