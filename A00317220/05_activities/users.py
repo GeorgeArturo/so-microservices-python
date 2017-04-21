@@ -89,6 +89,10 @@ def delete_reciente():
 		
 @app.route(api_url+'/users/<string:username>/commands', methods =['GET'])
 def history(username):
+list = {}
+  list =history(username);
+  return json.dumps (list),200
+
 
 
 @app.route(api_url+'/users/<string:username>/commands', methods =['POST'])
@@ -104,14 +108,7 @@ def delete_history():
  return ""HTTP 404 NOT FOUND", 404
 
 
-  list = {}
-  list =history(username);
-  return json.dumps (list),200
-
-
   
-		
-		
 
 if __name__ == "__main__":
 
